@@ -9,6 +9,7 @@
     "jest:start": "jest",
     "jest:ui": "majestic",
     "ui:init": "backstop init",
+    "ui": "backstop test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/sunkuangdong/yd-learn#readme",
   "devDependencies": {
+    "backstopjs": "^6.0.4",
+    "express": "^4.17.1",
     "jasmine-core": "^3.10.1",
     "jest": "^27.4.4",
     "karma": "^6.3.9",
@@ -30,9 +33,12 @@
     "karma-jasmine": "^4.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "majestic": "^1.8.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
     "phantomjs-prebuilt": "^2.1.16",
     "puppeteer": "^13.0.0",
     "rize": "^0.9.0",
-    "selenium-webdriver": "^4.1.0"
+    "selenium-webdriver": "^4.1.0",
+    "supertest": "^6.1.6"
   }
 }
