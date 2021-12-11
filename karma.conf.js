@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sat Dec 11 2021 14:57:04 GMT+0800 (中国标准时间)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -14,26 +14,24 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-    ],
+    files: ["./src/**/*.js", "./tests/unit/**/*.spec.js"],
 
 
     // list of files / patterns to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
+      "src/**/*.js": ["coverage"]
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
-    reporters: ['progress'],
-
+    reporters: ['progress', "coverage"],
 
     // web server port
     port: 9876,
@@ -59,7 +57,11 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
+    coverageReporter: {
+      type: 'html',
+      dir: "docs/coverage/"
+    },
 
     // Concurrency level
     // how many browser instances should be started simultaneously
