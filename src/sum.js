@@ -5,4 +5,4 @@ function sum(a, b) {
     return a + b
 }
 
-window.sum
+module.exports = sum;
